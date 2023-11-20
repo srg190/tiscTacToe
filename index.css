@@ -1,0 +1,9 @@
+.mode{
+  transition: all 0.5s !important;
+}
+.option-card:hover{
+  background-color: rgb(179, 140, 201) !important;
+  color: #611edc !important;
+  border: 1px solid !important;
+  transition-delay: 0.1s;
+}
