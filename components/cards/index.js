@@ -8,7 +8,8 @@ export const createContainer = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    textAlign: "center"
   });
 };
 
@@ -21,7 +22,7 @@ export const createCard = (data) => {
       margin: "2rem",
       padding: "1rem",
       width: "25%",
-      height: "15%",
+      height: "5%",
       borderRadius: "16px",
       color: "white",
       backgroundColor: themePallete.violet2_10,

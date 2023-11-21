@@ -6,16 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
     <!-- <link rel="stylesheet" href="./components/cards/cards.css" /> -->
-    <!-- <script>
-      let i = 0;
-      const onStart = () => {
-        console.log("hello");
-      };
-      onresize="onStart()"
-    </script> -->
+    <script type="module" src="index.js">
+      // import { start } from "./index.js";
+    </script>
   </head>
-  <body >
-    <script type="module" src="index.js"></script>
+  <body>
     <div id="root">
       <div class="container">
         <div class="head">
@@ -25,6 +20,40 @@
           <div class="mode-container">
             <div class="mode option-card">Single Player Mode</div>
             <div class="mode option-card">Dual Player Mode</div>
+          </div>
+        </div>
+        <div class="back">
+          <img
+            id="img-1"
+            src="./static//211686_back_arrow_icon.svg"
+            alt="Go Back"
+          />
+        </div>
+        <div class="grid">
+          <table class="grid-table">
+            <tr class="table-row">
+              <td><p>T</p></td>
+              <td><p>T</p></td>
+              <td><p>T</p></td>
+            </tr>
+            <tr class="table-row">
+              <td><p>T</p></td>
+              <td><p>T</p></td>
+              <td><p>T</p></td>
+            </tr>
+            <tr class="table-row">
+              <td><p>T</p></td>
+              <td><p>T</p></td>
+              <td><p>T</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="display-player">
+          <div class="player-card">
+            <div class="player">PlayerA : X</div>
+          </div>
+          <div class="player-card">
+            <div class="player">PlayerB : O</div>
           </div>
         </div>
       </div>

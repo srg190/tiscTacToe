@@ -1,7 +1,7 @@
 import { selectQuery } from "../components/targetElements/index.js";
 import cssProps from "../functionalities/cssProps.js";
 import { themePallete } from "./themePallete.js";
-import { addEventsInCard } from "../page/welcome/index.js";
+// import { addEventsInCard } from "../page/welcome/index.js";
 const query = selectQuery();
 export const setTheme = () => {
   query.body.style.cssText = cssProps({
@@ -33,6 +33,6 @@ export const setTheme = () => {
     fontFamiy: "sans-serif",
     fontSize: "7vw",
   });
-  addEventsInCard();
+  // addEventsInCard();
 };
 

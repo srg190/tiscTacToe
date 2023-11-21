@@ -1,28 +1,56 @@
 import { selectQuery } from "../../components/targetElements/index.js";
 import { createCard } from "../../components/cards/index.js";
+import cssProps from "../../functionalities/cssProps.js";
+import { addEventInIcon } from "../../components/backIcon/index.js";
 
-// .head {
-//   height: 35%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-family: sans-serif;
-//   font-size: 6vw;
-// }
 const query = selectQuery();
-let flag = false;
+const liveCount = () => {
+  let count = 3;
+  const timer = setInterval(function () {
+    let counter = query.welcomeHead;
+    count--;
+    counter.innerHTML = `Your game will starts in ... ${count}`;
+    if (count === 0) {
+      counter.innerHTML = "Welcome to the Game";
+      clearInterval(timer);
+      console.log("Time's up!");
+    }
+  }, 1000);
+};
+
 const fired = (e) => {
+  let flag = false;
   if (!flag) {
-    document
-      .querySelector(`#game-${e.target.id.split("-")[1] == 1 ? 0 : 1}`)
-      .remove();
+    if (
+      document.querySelector(`#game-${e.target.id.split("-")[1] == 1 ? 0 : 1}`)
+    )
+      document
+        .querySelector(`#game-${e.target.id.split("-")[1] == 1 ? 0 : 1}`)
+        .remove();
+
+    query.backIcon.style.cssText = cssProps({
+      display: "block",
+    });
+    let option = document.querySelector(`#game-${e.target.id.split("-")[1]}`);
+
+    option.removeEventListener("click", fired);
+    option.style.cssText = cssProps({
+      backgroundColor: "rgb(179, 140, 201) !important",
+      color: "#611edc !important",
+      border: "1px solid !important",
+      // transitionDelay: "0.1s",
+    });
+    liveCount();
     flag = true;
+  } else if (query.optionCards == 1) {
+    query.backIcon.style.cssText = cssProps({
+      display: "contents",
+    });
   }
 };
 export const addEventsInCard = () => {
   let cards = createCard();
   for (let card of cards) {
-    // console.log(card, " card");
     card.addEventListener("click", fired);
   }
 };

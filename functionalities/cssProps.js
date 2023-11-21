@@ -1,6 +1,5 @@
 import kebabToCss from "../components/convert/index.js";
 export default function (obj) {
-  // debug ger
   let str = "";
   for (let key in obj) {
     str += `${kebabToCss[key]}: ${obj[key]};`;

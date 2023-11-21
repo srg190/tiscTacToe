@@ -34,7 +34,7 @@ const bootstrapToCssMap = {
     "fontWeight": "font-weight",
     "letterSpacing": "letter-spacing",
     "lineHeight": "line-height",
-    "text-align": "text-align",
+    "textAlign": "text-align",
     "textDecoration": "text-decoration",
     "textTransform": "text-transform",
     "whiteSpace": "white-space",
