@@ -5,4 +5,4 @@ export default function (obj) {
     str += `${kebabToCss[key]}: ${obj[key]};`;
   }
   return str;
-}
+}// utils

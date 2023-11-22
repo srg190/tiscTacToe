@@ -2,6 +2,7 @@ import { selectQuery } from "../../components/targetElements/index.js";
 import { createCard } from "../../components/cards/index.js";
 import cssProps from "../../functionalities/cssProps.js";
 import { addEventInIcon } from "../../components/backIcon/index.js";
+import { playGame } from "../game/index.js";
 
 const query = selectQuery();
 const liveCount = () => {
@@ -14,6 +15,7 @@ const liveCount = () => {
       counter.innerHTML = "Welcome to the Game";
       clearInterval(timer);
       console.log("Time's up!");
+      playGame(true);
     }
   }, 1000);
 };

@@ -17,6 +17,8 @@ export const selectQuery = () => {
     displayPlayer: document.querySelector(".display-player"),
     playerCards: document.querySelectorAll(".player-card"),
     player: document.querySelectorAll(".player"),
+    ticGrid: document.querySelector(".grid"),
+    alert: document.querySelector(".alert"),
+    // getDataById: document.getElementById(id),
   };
 };
-

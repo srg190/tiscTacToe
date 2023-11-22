@@ -9,7 +9,6 @@
   transition-delay: 0.1s;
 }
 .play-option {
-  display: none;
   height: 50%;
 }
 .mode-container {
@@ -23,7 +22,7 @@
   cursor: pointer;
 }
 #img-1 {
-  display: contents;
+  /* display: contents; */
   height: 32px;
   transition: all 0.5s;
 }
@@ -58,7 +57,7 @@ td {
   cursor: pointer;
   transition: all 0.5s;
 }
-td:hover{
+td:hover {
   background-color: #0a0a09ee;
 }
 td > p {
@@ -99,3 +98,7 @@ td > p {
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* /////////////// */
+
+
