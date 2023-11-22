@@ -1,4 +1,5 @@
 import { selectQuery } from "../../components/targetElements/index.js";
+const query = selectQuery();
 export class TicTacToe {
   constructor() {
     this.board = Array(3)
@@ -9,6 +10,8 @@ export class TicTacToe {
     this.uiActivePlayer = this.query.welcomeHead.innerHTML;
     this.uiActivePlayer = "X";
     this.flag = false;
+    this.playAWinCount = 0;
+    this.playBWinCount = 0;
   }
   // {x, y} => coordinates of board
   displayOnBoard() {
@@ -78,20 +81,33 @@ export class TicTacToe {
   Win() {
     return this.flag;
   }
+  reMatchText() {
+    let headText = query.welcomeHead;
+    return (headText.innerHTML = "To Rematch Doubl-Click On Game Area");
+  }
   playGame(coordinate, id) {
     let { x, y } = coordinate;
     if (this.makeMove(x, y, id)) {
       if (this.checkWinner()) {
-        console.log(`Player ${this.activePlayer} wins!!!`);
+        // console.log(`Player ${this.activePlayer} wins!!!`);
+        this.activePlayer === "X" ? this.playAWinCount++ : this.playBWinCount++;
+        this.reMatchText();
         alert(`Player ${this.activePlayer} wins!!!`);
         this.flag = true;
       } else if (this.isBoardFull()) {
-        console.log(`Match Tie!!!`);
+        // console.log(`Match Tie!!!`);
+        this.reMatchText();
         alert(`Match Tie!!!`);
         this.flag = true;
       } else {
         this.switchPlayer();
       }
     }
+  }
+  resetGame() {
+    this.board = Array(3)
+      .fill()
+      .map(() => Array(3).fill(" "));
+    this.flag = false;
   }
 }

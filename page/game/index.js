@@ -14,26 +14,52 @@ export const onClickTableData = (e) => {
     x: loc % 3,
     y: Math.floor(loc / 3),
   };
-  console.log(coordinate, id);
-  if (!game.Win()) game.playGame(coordinate, id);
- 
+  // console.log(coordinate, id);
+  if (!game.Win()) {
+    game.playGame(coordinate, id);
+  }
+  let score = query.score;
+  score[0].innerHTML = game.playAWinCount;
+  score[1].innerHTML = game.playBWinCount;
 };
 
 export const playGame = (toggle) => {
-  let option = query.playOption;
-  let backIcon = query.backContainer;
-  let ticGrid = query.ticGrid;
-  let displayPlayer = query.displayPlayer;
-  option.style.cssText = cssProps({
+  query.playOption.style.cssText = cssProps({
     display: toggle ? "none" : "",
   });
-  backIcon.style.cssText = cssProps({
+  query.backContainer.style.cssText = cssProps({
     display: toggle ? "none" : "",
   });
-  ticGrid.style.cssText = cssProps({
+  query.ticGrid.style.cssText = cssProps({
     display: toggle ? "flex" : "none",
   });
-  displayPlayer.style.cssText = cssProps({
+  query.displayPlayer.style.cssText = cssProps({
     display: toggle ? "flex" : "none",
   });
+};
+
+export const onChangeName = async (e) => {
+  let txt = "";
+  let id = e.target.id.split("-")[1];
+  let newName = document.getElementById(e.target.id);
+
+  if (confirm("Want To Change Your Name ?")) {
+    let inputData = query.input;
+    inputData.removeAttribute('readonly');
+    inputData =
+      txt.charAt(0).toUpperCase() + `${txt} : ${id == 1 ? "X" : "O"}`.slice(1);
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  console.log(txt);
+};
+
+export const onRematch = () => {
+  game.resetGame();
+  let headText = query.welcomeHead;
+  headText.innerHTML = "Welcome to the Game";
+  let datas = query.tableData;
+  for (let data of datas) {
+    data.innerHTML = "T";
+  }
 };

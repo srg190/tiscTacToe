@@ -17,3 +17,18 @@ export const addEventInTableData = (fn) => {
     data.addEventListener("click", fn);
   }
 };
+
+export const addEventInPlayername = (fn) => {
+  let players = query.player;
+  let i = 1;
+  for (let player of players) {
+    player.id = `player-${i}`;
+    i++;
+    player.addEventListener("dblclick", fn);
+  }
+};
+
+export const addEventToRematch = (fn) => {
+  let tableBody = query.table;
+  tableBody.addEventListener("dblclick", fn);
+};

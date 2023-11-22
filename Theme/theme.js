@@ -26,12 +26,12 @@ export const setTheme = () => {
     borderRadius: "16px",
   });
   query.welcomeHead.style.cssText = cssProps({
-    height: "25%",
+    height: "20%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     fontFamiy: "sans-serif",
-    fontSize: "7vw",
+    fontSize: "4vw",
   });
   // addEventsInCard();
 };

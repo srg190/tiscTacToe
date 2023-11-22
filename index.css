@@ -31,7 +31,7 @@
 }
 /* //////////////////////////////////// */
 .grid {
-  height: 50%;
+  height: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +48,7 @@ td {
 table {
   width: 50%;
   height: 100%;
+  margin-bottom: 5%;
 }
 td {
   /* height: 20px; */
@@ -88,8 +89,9 @@ td > p {
   top: 10%;
   border-radius: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   background-color: #f7efe5;
 }
 
@@ -101,4 +103,19 @@ td > p {
 
 /* /////////////// */
 
-
+input {
+  width: 60%;
+  border-radius: 16px;
+  background-color: #c3acd0;
+  border: none;
+  padding: 0.5em;
+  /* font-size: 1em; */
+  text-align: center;
+  color: #7743db;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  /* align-self: center; */
+}
+h3 {
+  margin: 0.5em;
+}
