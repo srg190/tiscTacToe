@@ -32,3 +32,10 @@ export const addEventToRematch = (fn) => {
   let tableBody = query.table;
   tableBody.addEventListener("dblclick", fn);
 };
+
+export const addEnterKeyInInput = (fn) => {
+  let inputData = query.input;
+  for (let data of inputData) {
+    addEventListener("keydown", fn);
+  }
+};

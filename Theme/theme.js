@@ -3,6 +3,7 @@ import cssProps from "../functionalities/cssProps.js";
 import { themePallete } from "./themePallete.js";
 // import { addEventsInCard } from "../page/welcome/index.js";
 const query = selectQuery();
+
 export const setTheme = () => {
   query.body.style.cssText = cssProps({
     margin: 0,
@@ -18,7 +19,7 @@ export const setTheme = () => {
     alignItems: "center",
   });
   query.container.style.cssText = cssProps({
-    width: "80vw",
+    width: "60vw",
     height: "80vh",
     left: "10%",
     top: "10%",
@@ -32,6 +33,7 @@ export const setTheme = () => {
     alignItems: "center",
     fontFamiy: "sans-serif",
     fontSize: "4vw",
+    textAlign: "center",
   });
   // addEventsInCard();
 };

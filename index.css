@@ -119,3 +119,80 @@ input {
 h3 {
   margin: 0.5em;
 }
+/* /////////////////////////////////////////// */
+.board-container {
+  width: 20vw;
+  height: 80vh;
+  background-color: #611edc;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  border-radius: 1em;
+  margin: 1%;
+}
+
+.board-style {
+  width: 80%;
+  background-color: #7743db;
+  border-radius: 1em;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.score-head {
+  height: 20%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.score-board {
+  height: 60%;
+  margin: 2%;
+  position: static;
+}
+
+.board-object {
+  height: 90%;
+  width: 90%;
+  /* background-color: #fffbf5; */
+  overflow-y: auto;
+  transform: translateZ(0);
+  /* position: fixed; */
+}
+
+.board-object-1 {
+  transform: translateZ(0);
+  position: fixed;
+}
+.score-card {
+  margin: 2%;
+  height: 30%;
+  background-color: #f8bdff;
+  border-radius: 0.5em;
+  display: flex;  
+  flex-direction: column;
+}
+
+.data-container {
+  margin-top: 20%;
+}
+.notice-board{
+  color: #f7efe5;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 1.5em;
+}
+::-webkit-scrollbar-track {
+  background-color: #611edc;
+  border-radius: 1.5em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #814fde;
+  border-radius: 1.5em;
+  width: 8px;
+}

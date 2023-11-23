@@ -21,6 +21,10 @@ export const selectQuery = () => {
     alert: document.querySelector(".alert"),
     score: document.querySelectorAll(".player-card h3 span"),
     input: document.querySelectorAll("input"),
-    // getDataById: document.getElementById(id),
+    noticeBoardMessage: document.querySelector(
+      ".board-object .notice-board"
+    ),
+    matchCard: document.querySelector(".score-board-data"),
+    matchCardContainer: document.querySelectorAll(".board-object"),
   };
 };

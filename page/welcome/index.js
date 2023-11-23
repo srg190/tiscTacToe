@@ -5,6 +5,7 @@ import { addEventInIcon } from "../../components/backIcon/index.js";
 import { playGame } from "../game/index.js";
 
 const query = selectQuery();
+
 const liveCount = () => {
   let count = 3;
   const timer = setInterval(function () {
@@ -14,7 +15,7 @@ const liveCount = () => {
     if (count === 0) {
       counter.innerHTML = "Welcome to the Game";
       clearInterval(timer);
-      console.log("Time's up!");
+      // console.log("Time's up!");
       playGame(true);
     }
   }, 1000);
@@ -50,6 +51,7 @@ const fired = (e) => {
     });
   }
 };
+
 export const addEventsInCard = () => {
   let cards = createCard();
   for (let card of cards) {
